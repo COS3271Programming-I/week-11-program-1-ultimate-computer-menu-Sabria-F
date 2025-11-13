@@ -262,29 +262,34 @@ public class UltimateComputerMenu {
 
     //This method traps errors when entering an integer.
     static int intTry(String message){
+        //This variable holds the user's response.
         int response;
-        String dummy;
 
-        while(1 == 1){
+        //This loop will run until a value is returned to the method.
+        //This is so that if the user enters an incorrect value they will just be prompted again.
+        while(true){
 
+            //Run this code and check for errors.
             try {
                 System.out.print(message);
+                //Get the user's response.
                 response = userinput.nextInt();
                 userinput.nextLine();
+                //Return the response to the method. This is the way the loop will end.
                 return response;
             }
+            //If an error is thrown this code will run.
             catch (InputMismatchException e) {
-                dummy = userinput.nextLine();
-                continue;
+                userinput.nextLine();
             }
         }
     }
 
+    //This method does the same thing but, it makes sure that the user entered a double instead of an integer.
     static Double doubleTry(String message){
         Double response;
-        String dummy;
 
-        while(1 == 1){
+        while(true){
 
             try {
                 System.out.print(message);
@@ -293,17 +298,16 @@ public class UltimateComputerMenu {
                 return response;
             }
             catch (InputMismatchException e) {
-                dummy = userinput.nextLine();
-                continue;
+                userinput.nextLine();
             }
         }
     }
 
+    //Again, same thing, but for strings.
     static String stringTry(String message){
         String response;
-        String dummy;
 
-        while(1 == 1){
+        while(true){
 
             try {
                 System.out.print(message);
@@ -311,53 +315,61 @@ public class UltimateComputerMenu {
                 return response;
             }
             catch (InputMismatchException e) {
-                dummy = userinput.nextLine();
-                continue;
+                userinput.nextLine();
             }
         }
     }
 
+    //This is where the code from my Favorite Saying app will go.
     static String getFavoriteSaying(){
         String saying = "";
         return saying;
     }
 
+    //This is for the Text Art app.
     static String getTextArt(){
         String textArt = "";
         return textArt;
     }
 
+    //The code from the Calculator app will be here.
     static Double useCalculator(int function, Double x, Double y){
         Double result = 0.00;
         return result;
     }
 
+    //For the Binary Calculator code.
     static String useBinaryCalculator(int function, String binaryNum1, String binaryNum2){
         String result = "";
         return result;
     }
 
+    //For the Encouragement app code.
     static String giveEncouragement(int age, String status){
         String message = "";
         return message;
     }
 
+    //Dice App code.
     static int[] rollDice(){
         int[] results = new int[3];
 
         return results;
     }
 
+    //Oppish translator code here.
     static String translateToOppish(String englishString){
         String result = "";
         return result;
     }
 
+    //Fibonacci Sequence generator code here.
     static int[] calculateFibonacci(int length){
         int[] result = new int[length];
         return result;
     }
 
+    //The Double Factorial code will go here.
     static Double calculateDoubleFactorial(Double opperand){
         Double result = 0.00;
         return result;
