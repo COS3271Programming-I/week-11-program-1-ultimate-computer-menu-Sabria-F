@@ -231,13 +231,13 @@ public class UltimateComputerMenu {
 
                 //Prompt the user for the number they want to take the double factorial of.
                 //Call the error trapping method.
-                Double opperand = doubleTry("Enter the number you want to take the double factorial of --> ");
+                int opperand = intTry("Enter the number you want to take the double factorial of --> ");
 
                 //Formatting.
                 System.out.println("\n");
 
-                //Call the double factorial method, and display the result with a format string.
-                System.out.format("The double factorial of %5f is: %5.2f.%n", opperand, calculateDoubleFactorial(opperand));
+                //Call the double factorial method, and display the result.
+                System.out.println("The double factorial of " + opperand + " is: " + calculateDoubleFactorial(opperand));
 
                 //Formatting.
                 System.out.println("\n");
@@ -370,8 +370,8 @@ public class UltimateComputerMenu {
     }
 
     //The Double Factorial code will go here.
-    static Double calculateDoubleFactorial(Double opperand){
-        Double result = 0.00;
+    static int calculateDoubleFactorial(int opperand){
+        int result = 0;
         return result;
     }
 }
