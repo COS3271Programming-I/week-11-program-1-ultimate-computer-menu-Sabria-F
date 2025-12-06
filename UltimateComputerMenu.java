@@ -51,8 +51,9 @@ public class UltimateComputerMenu {
             //Test if the user wants to run the first method.
             if(taskNum == 1){
                 
+                DisplayApp saying = new DisplayApp();
                 //Get the favorite saying and store it as a string called favSaying.
-                String favSaying = getFavoriteSaying();
+                String favSaying = saying.displayFavoriteSaying();
 
                 //Display the saying.
                 System.out.println("My favorite saying is:\n" + favSaying);
@@ -64,8 +65,10 @@ public class UltimateComputerMenu {
             //Test if the user wants run the second method.
             else if(taskNum == 2){
 
+                TextArt art = new TextArt();
+
                 //Get the text art and store it as a string called textArt.
-                String textArt = getTextArt();
+                String textArt = art.displayTextArt();
 
                 //Display the text art.
                 System.out.println(textArt);
@@ -162,8 +165,10 @@ public class UltimateComputerMenu {
                 //Formatting.
                 System.out.println("\n");
 
+                EncouragementApp encourage = new EncouragementApp();
+
                 //Call the giveEncouragement method, and display the resulting message.
-                System.out.println(giveEncouragement(userAge, userStatus));
+                System.out.println(encourage.giveEncouragement(userAge, userStatus));
 
                 //Formatting.
                 System.out.println("\n");
@@ -201,7 +206,9 @@ public class UltimateComputerMenu {
                 //Display the string in Oppish.
                 System.out.println("Translated to Oppish:");
 
-                System.out.println(translateToOppish(englishString));
+                OppishApp oppish = new OppishApp();
+
+                System.out.println(oppish.translateToOppish(englishString));
 
                 //Formatting.
                 System.out.println("\n");
@@ -320,18 +327,6 @@ public class UltimateComputerMenu {
         }
     }
 
-    //This is where the code from my Favorite Saying app will go.
-    static String getFavoriteSaying(){
-        String saying = "";
-        return saying;
-    }
-
-    //This is for the Text Art app.
-    static String getTextArt(){
-        String textArt = "";
-        return textArt;
-    }
-
     //The code from the Calculator app will be here.
     static Double useCalculator(int function, Double x, Double y){
         Double result = 0.00;
@@ -344,23 +339,11 @@ public class UltimateComputerMenu {
         return result;
     }
 
-    //For the Encouragement app code.
-    static String giveEncouragement(int age, String status){
-        String message = "";
-        return message;
-    }
-
     //Dice App code.
     static int[] rollDice(){
         int[] results = new int[3];
 
         return results;
-    }
-
-    //Oppish translator code here.
-    static String translateToOppish(String englishString){
-        String result = "";
-        return result;
     }
 
     //Fibonacci Sequence generator code here.
